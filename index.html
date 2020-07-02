@@ -12,6 +12,44 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Boro App</h1>
+
+    <section>
+      <form id="sign-up">
+        <input required placeholder="Email" type="email" name="credentials[email]">
+        <input required placeholder="Password" type="password" name="credentials[password]">
+        <input required placeholder="Password Confirmation" type="password" name="credentials[password_confirmation]">
+        <input required placeholder="Location (City,State)" type="text" name="credentials[location]">
+        <input required placeholder="Instagram" type="text" name="credentials[ig]">
+        <input required placeholder="Bio" type="text" maxlength="150" name="credentials[bio]">
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+
+    <section>
+      <form id="sign-in">
+        <input required placeholder="Email" type="email" name="credentials[email]">
+        <input required placeholder="Password" type="password" name="credentials[password]">
+        <button type="submit">Sign In</button>
+      </form>
+    </section>
+
+    <section>
+      <form id="change-password">
+        <input required placeholder="Old Password" type="password" name="passwords[old]">
+        <input required placeholder="New Password" type="password" name="passwords[new]">
+        <button type="submit">Change Password</button>
+      </form>
+    </section>
+
+
+  <section>
+    <form id="sign-out">
+      <button type="submit">Sign Out</button>
+    </form>
+  </section>
+
+  <div id="auth-message"></div>
+
     </body>
 </html>
