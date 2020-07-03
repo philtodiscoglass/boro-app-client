@@ -14,7 +14,6 @@ const onSignUpFailure = () => {
 
 const onSignInSuccess = (response) => {
   store.user = response.user
-  console.log(store.user)
   $('#auth-message').text(`You have signed in, ${response.user.email}`)
   $('form').trigger('reset')
 }
@@ -25,12 +24,22 @@ const onSignInFailure = () => {
 }
 
 const onChangePasswordSuccess = (response) => {
-  $('#auth-message').text(`You have changed your password, ${response.user.email}`)
+  $('#auth-message').text(`You have changed your password`)
   $('form').trigger('reset')
 }
 
 const onChangePasswordFailure = () => {
   $('#auth-message').text('Change password failed')
+  $('form').trigger('reset')
+}
+
+const onSignOutSuccess = () => {
+  $('#auth-message').text('You have signed out')
+  $('form').trigger('reset')
+}
+
+const onSignOutFailure = () => {
+  $('#auth-message').text('Sign out failed')
   $('form').trigger('reset')
 }
 
@@ -40,5 +49,7 @@ module.exports = {
   onSignInSuccess,
   onSignInFailure,
   onChangePasswordSuccess,
-  onChangePasswordFailure
+  onChangePasswordFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
