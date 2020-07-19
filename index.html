@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Boro App</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -42,6 +42,23 @@
       </form>
     </section>
 
+    <section>
+      <div class="post-buttons">
+      <button id="get-glass-posts" class="btn btn-info mr-2">Get Glass Posts!</button>
+      <button id="clear-glass-posts" class="btn btn-info mr-2">Clear Glass Posts</button>
+    </div>
+    </section>
+
+    <section>
+      <form id="create-glass-post">
+        <input required placeholder="Title" type="text" name="glassPost[title]">
+        <input required placeholder="Body" type="text" name="glassPost[body]">
+        <input required placeholder="Price(numbers only)" type="text" name="glassPost[price]">
+        <input placeholder="Image Url" type="text" name="glassPost[imageUrl]">
+        <button type="submit">Create Post!</button>
+      </form>
+    </section>
+
 
   <section>
     <form id="sign-out">
@@ -49,7 +66,8 @@
     </form>
   </section>
 
-  <div id="auth-message"></div>
+  <div id="message"></div>
+  <div class="content"></div>
 
     </body>
 </html>

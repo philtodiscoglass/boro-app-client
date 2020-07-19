@@ -11,5 +11,8 @@ $(() => {
 })
 
 $(() => {
-
+  $('#get-glass-posts').on('click', glassPostEvents.onGetGlassPosts)
+  $('#create-glass-post').on('submit', glassPostEvents.onCreateGlassPost)
+  $('.content').on('click', '.delete-glass-post', glassPostEvents.onDeleteGlassPost)
+  $('.content').on('submit', '.update-glass-post', glassPostEvents.onUpdateGlassPost)
 })
