@@ -6,6 +6,9 @@ const glassPostsTemplate = require('../templates/glassPostsTemplate.handlebars')
 const onGetGlassPostsSuccess = (data) => {
   const showGlassPostsHtml = glassPostsTemplate({ glassPosts: data.glassPosts })
   $('.content').html(showGlassPostsHtml)
+  $('.content').show()
+  $('#create-glass-post-page').hide()
+  $('#change-password-page').hide()
 }
 
 const onGetGlassPostsFailure = () => {

@@ -1,14 +1,16 @@
 {{#each glassPosts as |glassPost|}}
   {{log glassPost}}
   <div data-id-container="{{glassPost._id}}">
-    <h4>User: {{glassPost.owner}}
     <h2>{{glassPost.title}}</h2>
     <p>{{glassPost.body}}</p>
     <h5>Price: ${{glassPost.price}}</h5>
     <img src="https://i.imgur.com/2Ly6qwM.jpg" width="300px" height="300px">
+    <h6>User: {{glassPost.owner}}
     <button data-id="{{glassPost._id}}"
       class="delete-glass-post btn btn-danger">Delete this post!
     </button>
+
+
 
     <section class="update-glass-post" data-id="{{glassPost._id}}">
       <form id="update-glass-post-form" data-id="{{glassPost._id}}">

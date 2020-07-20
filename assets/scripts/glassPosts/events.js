@@ -12,6 +12,11 @@ const onGetGlassPosts = (event) => {
     .catch(ui.onGetGlassPostsFailure)
 }
 
+const clearGlassPosts = (event) => {
+  event.preventDefault()
+  $('.content').hide()
+}
+
 const onCreateGlassPost = (event) => {
   event.preventDefault()
   const form = event.target
@@ -20,6 +25,13 @@ const onCreateGlassPost = (event) => {
     .then(ui.onCreateGlassPostSuccess)
     // .then(() => onGetGlassPosts())
     .catch(ui.onCreateGlassPostFailure)
+}
+
+const showCreateGlassPost = (event) => {
+  event.preventDefault()
+  $('#create-glass-post-page').show()
+  $('.content').hide()
+  $('#change-password-page').hide()
 }
 
 const onDeleteGlassPost = (event) => {
@@ -46,5 +58,7 @@ module.exports = {
   onGetGlassPosts,
   onCreateGlassPost,
   onDeleteGlassPost,
-  onUpdateGlassPost
+  onUpdateGlassPost,
+  clearGlassPosts,
+  showCreateGlassPost
 }
