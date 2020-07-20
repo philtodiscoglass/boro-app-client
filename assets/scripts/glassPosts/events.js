@@ -50,7 +50,7 @@ const onUpdateGlassPost = (event) => {
   console.log('made it to events')
   api.updateGlassPost(glassPostId, data)
     .then(ui.onUpdateGlassPostSuccess)
-    .then(() => onGetGlassPosts())
+    // .then(() => onGetGlassPosts())
     .catch(ui.onUpdateGlassPostFailure)
 }
 

@@ -4,7 +4,8 @@
     <h2>{{glassPost.title}}</h2>
     <p>{{glassPost.body}}</p>
     <h5>Price: ${{glassPost.price}}</h5>
-    <img src="https://i.imgur.com/2Ly6qwM.jpg" width="300px" height="300px">
+    <!-- <img src="https://i.imgur.com/2Ly6qwM.jpg" width="300px" height="300px"> -->
+    <!-- <img src={{glassPost.imageUrl}} width="300px" height="300px"> -->
     <h6>User: {{glassPost.owner}}
     <button data-id="{{glassPost._id}}"
       class="delete-glass-post btn btn-danger">Delete this post!
@@ -18,7 +19,6 @@
         <input name="glassPost[title]" type="text" required placeholder="Title" value="{{glassPost.title}}">
         <input name="glassPost[body]" type="text" required placeholder="Body" value="{{glassPost.body}}">
         <input name="glassPost[price]" type="text" required placeholder="Price"value="{{glassPost.price}}">
-        <input name="glassPost[imageUrl]" type="text" placeholder="Image Url" value="{{glassPost.imageUrl}}">
         <button type="submit" class="update-glass-post btn btn-primary" data-id="{{glassPost._id}}">Update Post!</button>
       </form>
     </section>
